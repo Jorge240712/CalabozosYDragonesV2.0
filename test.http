@@ -1,0 +1,80 @@
+### Traer todos los jefes
+GET http://localhost:3000/jefes
+
+### Traer un solo jefe por ID
+GET http://localhost:3000/jefes/1
+
+### Filtrar jefes por tipo (Ticket único)
+GET http://localhost:3000/jefes/filtrar?tipo=Dragón
+
+### Filtrar sin mandar tipo (Bonus — debe devolver todos)
+GET http://localhost:3000/jefes/filtrar
+
+### Crear un nuevo jefe
+POST http://localhost:3000/jefes
+Content-Type: application/json
+
+{
+  "nombre": "Skarn el Quebrantahuesos",
+  "tipo": "Gigante",
+  "vida": 600,
+  "nivel_amenaza": 10,
+  "derrotado": false
+}
+
+### Actualizar un jefe por ID
+PUT http://localhost:3000/jefes/1
+Content-Type: application/json
+
+{
+  "nombre": "Ignathrax el Devorador",
+  "tipo": "Dragón",
+  "vida": 200,
+  "nivel_amenaza": 9,
+  "derrotado": false
+}
+
+### Eliminar un jefe por ID
+DELETE http://localhost:3000/jefes/1
+
+### 🎒 Misión 26 — Test de Objetos
+
+### 1. Obtener todos los objetos
+
+GET http://localhost:3000/objetos
+
+### 2. Obtener un objeto por ID
+
+GET http://localhost:3000/objetos/1
+
+### 3. Crear un objeto
+
+POST http://localhost:3000/objetos
+Content-Type: application/json
+
+{
+"nombre": "Martillo de Guerra",
+"tipo": "Arma",
+"valor": 750,
+"equipado": false
+}
+
+### 4. Actualizar un objeto
+
+PUT http://localhost:3000/objetos/1
+Content-Type: application/json
+
+{
+"nombre": "Espada del Alba Mejorada",
+"tipo": "Arma",
+"valor": 1000,
+"equipado": true
+}
+
+### 5. Eliminar un objeto
+
+DELETE http://localhost:3000/objetos/1
+
+### 6. Filtrar objetos por tipo
+
+GET http://localhost:3000/objetos/filtrar?tipo=Arma
